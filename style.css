@@ -1,65 +1,116 @@
-* {
-box-sizing: border-box;
-margin: 0;/*junta*/
-padding: 0;
-font-family: Arial, sans-serif;
-}
-
 body {
-background-color: #141414;
-display: flex;
-align-items: center;
-justify-content: center;/*coloca no centro no topo*/
-height: 100vh;/*coloca no centro no meio*/
-color: white;
+    margin: 0  ;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141414;
+    color: white;
 }
 
-.login-container {
-background-color: rgba(0, 0, 0, 0.75);
-padding: 40px;/*distancia das letras para a borda*/
-border-radius: 8px;
-width: 100%;/*largura do container aqui pegou toda a pagina*/
-max-width: 320px;/*centralizou novamente*/
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: sticky; /**/
+    top: 0;
+    z-index: 10;
 }
 
-.login-container h1 {
-font-size: 24px;
-margin-bottom: 20px;
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: red;
+    margin-right: 30px;
 }
 
-.login-container input {
-width: 100%;
-padding: 12px;/*distancia das leras do input para a borda*/
-margin-bottom: 15px;/*distancia da borda para outra coisa*/
-border: none;
-border-radius: 4px;
-background-color: #333;
-color: white;
+.menu a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
 }
 
-.login-container button {
-width: 100%;
-padding: 12px;
-background-color: #e50914;
-border: none;
-border-radius: 4px;
-color: white;
-font-weight: bold;
-cursor: pointer;
+.menu a:hover {
+    text-decoration: underline;
 }
 
-.login-container button:hover { /*quando passar com o cursor ira mudar de cor.*/
-    background-color: #f6121d;/*esta cor*/
+/* Banner */
+.banner {
+    height: 400px;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.8) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(75, 0, 130, 0.6) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%,
+        rgba(139, 69, 19, 0.4) 0%, transparent 50%),
+        linear-gradient(135deg, #0f0f0f 0%, #1a0000 50%, #000000 100%);
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    border-bottom: 3px solid #e50914;
+
 }
 
-.login-container .signup {
-margin-top: 20px;
-font-size: 14px;
-text-align: center;
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.login-container .signup a {
-color: #fff;
-text-decoration: underline;
+.banner button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
 }
 
+.btn-play {
+    background-color: white;
+    color: black;
+}
+
+.btn-info {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.btn-play:hover {
+    background-color: #ccc;
+}
+
+.btn-info:hover {
+    background-color: rgba(109, 109, 110, 0.5);
+}
+
+/* Seção de filmes */
+.filmes-row {
+    padding: 20px;
+}
+
+.filmes-row h2 {
+    margin-bottom: 10px;
+}
+
+.filmes {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.filmes img {
+    width: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.filmes img {
+    width: 200px ;
+    height: 300px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+
+}
+
+.filmes img:hover {
+    transform: scale(1.1);
+}
