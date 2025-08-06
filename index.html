@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Netiflix Simples</title>
+</head>
+<body>
+    
+    <div class="login-container">
+        <h1>Entrar</h1>
+        <input type="text" id="email" placeholder="Email ou número de telefone">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()"">Entrar</button>
+        <div class="signup">
+            Novo por aqui? <a href="#">Assine agora</a>
+
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('password').value;
+
+            if  (email && senha) {
+                alert('Login simulado com sucesso! ' );
+            } else {
+                alert('Porfavor, preencha todos os campos. ' );
+            }
+        }
+    </script>
+
+</body>
+</html>

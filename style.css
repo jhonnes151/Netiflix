@@ -1,0 +1,65 @@
+* {
+box-sizing: border-box;
+margin: 0;/*junta*/
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: #141414;
+display: flex;
+align-items: center;
+justify-content: center;/*coloca no centro no topo*/
+height: 100vh;/*coloca no centro no meio*/
+color: white;
+}
+
+.login-container {
+background-color: rgba(0, 0, 0, 0.75);
+padding: 40px;/*distancia das letras para a borda*/
+border-radius: 8px;
+width: 100%;/*largura do container aqui pegou toda a pagina*/
+max-width: 320px;/*centralizou novamente*/
+}
+
+.login-container h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.login-container input {
+width: 100%;
+padding: 12px;/*distancia das leras do input para a borda*/
+margin-bottom: 15px;/*distancia da borda para outra coisa*/
+border: none;
+border-radius: 4px;
+background-color: #333;
+color: white;
+}
+
+.login-container button {
+width: 100%;
+padding: 12px;
+background-color: #e50914;
+border: none;
+border-radius: 4px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
+
+.login-container button:hover { /*quando passar com o cursor ira mudar de cor.*/
+    background-color: #f6121d;/*esta cor*/
+}
+
+.login-container .signup {
+margin-top: 20px;
+font-size: 14px;
+text-align: center;
+}
+
+.login-container .signup a {
+color: #fff;
+text-decoration: underline;
+}
+
