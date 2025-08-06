@@ -41,8 +41,11 @@ body {
         radial-gradient(circle at 80% 20%, rgba(75, 0, 130, 0.6) 0%, transparent 50%),
         radial-gradient(circle at 40% 80%,
         rgba(139, 69, 19, 0.4) 0%, transparent 50%),
-        linear-gradient(135deg, #0f0f0f 0%, #1a0000 50%, #000000 100%);
-     display: flex;
+        linear-gradient(135deg, #0f0f0f 0%, #1a0000 50%, #000000 100%),
+        url('https://t.ctcdn.com.br/2BczVuQGfEc5BlDJ4aZt7J3ITjU=/1200x675/smart/i493438.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
@@ -51,7 +54,28 @@ body {
 
 }
 
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://t.ctcdn.com.br/2BczVuQGfEc5BlDJ4aZt7J3ITjU=/1200x675/smart/i493438.jpeg');
+    background-size: cover;
+    background-position: center top 30%;
+    filter: brightness(0.4) contrast(1.1);
+    z-index: 0;
+}
+
+/* Certifique-se de que o conteúdo da banner fique acima da imagem */
+.banner * {
+    position: relative;
+    z-index: 1;
+}
+
 .banner h1 {
+    color: #e10c17;
     font-size: 3rem;
     margin-bottom: 20px;
 }
